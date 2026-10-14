@@ -1,0 +1,270 @@
+SELECT * FROM c
+
+-- 2
+select c.station_name ,c.city,c.status from c
+
+---3 
+select c.id ,c.station_name from c
+
+--5
+select c.station_name from c where c.city = 'Hyderabad'
+--6
+select c.station_name from c where c.city = 'Mumbai'
+
+
+---7
+select c.station_name from c where c.status = 'Maintenance'
+
+-----8
+select c.station_name from c where c.station_type = 'Fast'
+
+-----9
+select c.station_name from c where c.capacity_kw > 100
+
+--11. Display stations whose revenue is greater than 15000 .
+
+select c.station_name,c.revenue from c where c.revenue > 15000
+
+
+--12. Display stations having more than 40 daily sessions.
+select c.station_name,c.daily_sessions from c where c.daily_sessions >40
+
+--13. Display stations whose uptime is below 96 .
+select c.station_name,c.daily_sessions,c.uptime_percent from c where c.uptime_percent < 96
+
+14. Display stations whose capacity is between 50 and 120 .
+select c.station_name,c.daily_sessions from c where 50 <= c.capacity_kw and 120 >c.capacity_kw 
+
+---15
+SELECT
+    c.station_name,
+    c.city,
+    c.revenue
+FROM c
+WHERE c.revenue < 10000
+
+
+--Display stations that are Fast and Active .
+select c.station_name,c.daily_sessions from c where c.station_type in ("Fast","Active")
+
+SELECT
+    c.station_name,
+    c.city,
+    c.revenue
+FROM c
+WHERE c.city = "Hyderabad"
+    AND c.revenue > 10000
+
+
+--stations whose capacity is greater than 100 and daily sessions are greater than 40 .
+select * from c where 100 <= c.capacity_kw and c.daily_sessions > 40
+
+
+18---
+SELECT
+    c.station_name,
+    c.city,
+    c.capacity_kw,
+    c.daily_sessions
+FROM c
+WHERE c.capacity_kw > 100
+    AND c.daily_sessions > 40
+
+
+SELECT
+    c.station_name,
+    c.city,
+    c.status,
+    c.uptime_percent
+FROM c
+WHERE c.status = "Active"
+    AND c.uptime_percent > 97
+
+
+SELECT
+    c.station_name,
+    c.city,
+    c.station_type,
+    c.revenue
+FROM c
+WHERE c.station_type = "Standard"
+    AND c.revenue < 10000
+
+select * from c where c.city in ('Hyderbad','Bengaluru')   
+
+select * from c where c.zone in ('North','South')
+
+
+
+---Display stations located in Mumbai, Delhi, or Chennai.
+select * from c where c.city in ('Mumbai','Delhi','Chennai')
+---
+---Display all stations ordered by revenue from lowest to highest.
+select c.station_name ,c.revenue from c order by c.revenue
+
+--26
+select c.station_name,c.revenue from c order by c.revenue desc
+
+--27 
+
+
+---28. Display stations ordered by uptime percentage from lowest to highest.
+select * from c  order by c.uptime_percent
+
+---Display stations ordered first by city and then by revenue.
+select * from c order by c.city asc, c.revenue desc
+
+
+--30. Count the total number of charging stations.--
+select count(c.station_name)
+ from c
+
+ --31
+SELECT VALUE COUNT(1)
+FROM c
+WHERE c.status = "Active"
+
+---32
+SELECT VALUE COUNT(1)
+FROM c
+WHERE c.station_type = "Fast"
+
+---31 33. Count the number of stations in Pune.
+select count(c.station_name)
+ from c where c.city = 'Pune'
+
+---34
+SELECT VALUE COUNT(1)
+FROM c
+WHERE c.revenue > 15000
+
+ ---35
+ select c.city ,count(1) as st_num from c group by c.city
+
+ --36 
+
+select c.station_type ,count(1) as st_num from c group by c.station_type
+
+--37
+select c.status ,count(1) as st_num from c group by c.status
+
+---Count the number of stations by status .
+
+select c.status,count(c.station_name)
+ from c group by c.status
+----Find the average revenue for each station type.
+select c.station_type , avg(c.revenue) from c 
+group by c.station_type
+--
+
+SELECT
+    c.city,
+    SUM(c.daily_sessions) AS totalSessions
+FROM c
+GROUP BY c.city
+---
+SELECT
+    c.city,
+    AVG(c.uptime_percent) AS avgUptime
+FROM c
+GROUP BY c.city
+
+---Find the average charging capacity for each station type.
+select c.station_type, avg(c.capacity_kw) from c group by c.station_type
+
+
+--Find total revenue by city using only Active stations.
+select c.city , sum(c.revenue) from c where c.status = 'Active' group by c.city
+
+
+---44
+select c.city ,count(1) as fast_station from c where c.station_type ="Fast" group by c.city
+
+---Find average revenue by city for stations whose revenue is above 8000 .
+select c.city , avg(c.revenue) from c 
+where c.revenue > 8000 group by c.city
+
+
+---Find total daily sessions grouped by station type.
+select c.station_name , sum(c.daily_sessions) from c group by c.station_name
+
+select Top 5 c.station_name,c.revenue from c order by c.revenue desc 
+
+---50
+select * from c where c.revenue>12000 and c.uptime_percent>97 order by c.revenue asc
+
+select b.city ,b.new from (
+select  c.city , sum(c.revenue) as new 
+from c group by c.city  
+) as b 
+order by b.new desc
+
+----
+SELECT
+    c.station_name,
+    c.city,
+    c.daily_sessions
+FROM c
+WHERE (c.city = "Hyderabad" OR c.city = "Bengaluru")
+    AND c.daily_sessions > 30
+
+  ---52
+
+ SELECT
+    c.station_name,
+    c.city,
+    c.uptime_percent,
+    c.status
+FROM c
+WHERE c.status = "Maintenance"
+ORDER BY c.uptime_percent ASC   
+
+---53
+SELECT
+    c.station_name,
+    c.city,
+    c.revenue,
+    c.uptime_percent
+FROM c
+WHERE c.revenue > 15000
+
+------
+SELECT
+    c.station_name,
+    c.city,
+    c.station_type,
+    c.capacity_kw
+FROM c
+WHERE c.station_type = "Fast"
+    AND c.capacity_kw >= 120
+ORDER BY c.capacity_kw DESC
+---
+select c.station_type,avg(c.revenue) from c group by c.station_type 
+
+---57
+SELECT TOP 1
+    c.station_name,
+    c.uptime_percent
+FROM c
+ORDER BY c.uptime_percent ASC
+
+---58
+SELECT
+    c.station_type,
+    AVG(c.revenue) AS avgRevenue
+FROM c
+GROUP BY c.station_type
+
+
+---59
+SELECT
+    c.city,
+    SUM(c.daily_sessions) AS totalSessions
+FROM c
+GROUP BY c.city
+
+---60
+
+SELECT VALUE COUNT(1)
+FROM c
+WHERE c.status = 'Maintenance'
