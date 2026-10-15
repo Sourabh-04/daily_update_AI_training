@@ -1,0 +1,23 @@
+October_15 assigement update
+-
+
+PDF AUTOMATION
+│
+├── Digital PDF
+│   ├── PyMuPDF
+│   │   ├── Open
+│   │   ├── Read Pages
+│   │   ├── Extract Text
+│   │   └── Search Content
+│   │
+│   └── PyPDF
+│       ├── Read PDF
+│       ├── Extract Text
+│       └── Combine Content
+│
+└── Scanned PDF
+    ├── PyMuPDF
+    ├── Convert to Image
+    ├── PIL
+    ├── Tesseract OCR
+    └── Extract Text
