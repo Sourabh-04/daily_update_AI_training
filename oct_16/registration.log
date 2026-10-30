@@ -1,0 +1,38 @@
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+ERROR - Registration ID: R103, Error: Input should be greater than 0, Field: amount
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+ERROR - Registration ID: R103, Error: Input should be greater than 0, Field: amount
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+INFO - Registration id valid R103
+WARNING - VIP ticket with reg id R103
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+INFO - Registration id valid R103
+WARNING - VIP ticket with reg id R103
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+INFO - Registration id valid R103
+WARNING - VIP ticket with reg id R103
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+INFO - Registration id valid R103
+WARNING - VIP ticket with reg id R103
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+INFO - Registration id valid R103
+WARNING - VIP ticket with reg id R103
+INFO - Registration id valid R104
+INFO - Registration id valid R101
+ERROR - Registration ID: R102, Error: Input should be greater than 18, Field: age
+INFO - Registration id valid R103
+WARNING - VIP ticket with reg id R103
+INFO - Registration id valid R104
