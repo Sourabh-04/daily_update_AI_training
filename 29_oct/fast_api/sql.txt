@@ -1,0 +1,56 @@
+
+-- Interview Scheduling System (ISS)
+-- Step 1: Create database tables
+
+
+CREATE TABLE interviews (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    candidate_id INTEGER NOT NULL
+        REFERENCES candidates(id),
+    interviewer_name VARCHAR(100) NOT NULL,
+    start_time TIMESTAMPTZ NOT NULL,
+    end_time TIMESTAMPTZ NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'Scheduled'
+        CHECK (status IN ('Scheduled', 'Completed', 'Cancelled')),
+    cancellation_reason TEXT,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CHECK (start_time < end_time),
+    CHECK (
+        (status = 'Cancelled' AND cancellation_reason IS NOT NULL
+            AND LENGTH(TRIM(cancellation_reason)) > 0)
+        OR
+        (status <> 'Cancelled' AND cancellation_reason IS NULL)
+    )
+);
+
+CREATE TABLE feedback (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    interview_id INTEGER NOT NULL UNIQUE
+        REFERENCES interviews(id),
+    rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    comments TEXT,
+    submitted_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE audit_events (
+    id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    interview_id INTEGER NOT NULL
+        REFERENCES interviews(id),
+    action VARCHAR(50) NOT NULL,
+    details TEXT,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Indexes for common searches
+CREATE INDEX idx_interviews_candidate
+    ON interviews(candidate_id);
+
+CREATE INDEX idx_interviews_start_time
+    ON interviews(start_time);
+
+CREATE INDEX idx_interviews_status
+    ON interviews(status);
+
+CREATE INDEX idx_audit_events_interview
+    ON audit_events(interview_id);
