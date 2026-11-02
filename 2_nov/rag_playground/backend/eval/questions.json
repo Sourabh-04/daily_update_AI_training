@@ -1,0 +1,72 @@
+[
+  {
+    "id": "policy-annual-leave",
+    "document": "Employee_Workplace_Policy.txt",
+    "question": "How many days of paid annual leave do full-time employees receive?",
+    "keywords": [["16", "sixteen"]],
+    "should_refuse": false
+  },
+  {
+    "id": "policy-office-days",
+    "document": "Employee_Workplace_Policy.txt",
+    "question": "Which days must employees work from the office?",
+    "keywords": [["tuesday"], ["thursday"]],
+    "should_refuse": false
+  },
+  {
+    "id": "policy-sick-leave",
+    "document": "Employee_Workplace_Policy.txt",
+    "question": "How many paid sick-leave days do employees get per calendar year?",
+    "keywords": [["6", "six"]],
+    "should_refuse": false
+  },
+  {
+    "id": "policy-receipts",
+    "document": "Employee_Workplace_Policy.txt",
+    "question": "Within how many days after a trip must expense receipts be submitted?",
+    "keywords": [["14", "fourteen"]],
+    "should_refuse": false
+  },
+  {
+    "id": "policy-travel-allowance",
+    "document": "Employee_Workplace_Policy.txt",
+    "question": "What is the company travel allowance per day?",
+    "keywords": [["cannot find", "can't find", "not in the provided"]],
+    "should_refuse": true
+  },
+  {
+    "id": "it-lost-laptop",
+    "document": "IT_Help_Desk_Guide.txt",
+    "question": "How quickly must a lost company laptop be reported?",
+    "keywords": [["one hour", "1 hour", "an hour"]],
+    "should_refuse": false
+  },
+  {
+    "id": "it-p1-response",
+    "document": "IT_Help_Desk_Guide.txt",
+    "question": "How quickly do Priority 1 incidents receive an initial response?",
+    "keywords": [["30", "thirty"], ["minute"]],
+    "should_refuse": false
+  },
+  {
+    "id": "it-password-reset-fails",
+    "document": "IT_Help_Desk_Guide.txt",
+    "question": "What should an employee do if the self-service password reset fails?",
+    "keywords": [["ticket"]],
+    "should_refuse": false
+  },
+  {
+    "id": "it-software-request",
+    "document": "IT_Help_Desk_Guide.txt",
+    "question": "How should employees request new software?",
+    "keywords": [["help desk", "helpdesk"]],
+    "should_refuse": false
+  },
+  {
+    "id": "it-guest-wifi",
+    "document": "IT_Help_Desk_Guide.txt",
+    "question": "What is the guest Wi-Fi password for the office?",
+    "keywords": [["cannot find", "can't find", "not in the provided"]],
+    "should_refuse": true
+  }
+]

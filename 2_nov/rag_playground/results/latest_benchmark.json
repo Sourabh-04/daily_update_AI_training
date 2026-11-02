@@ -1,0 +1,116 @@
+{
+  "status": "completed",
+  "document": "IT_Help_Desk_Guide.txt",
+  "model_ids": [
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "liquid/lfm-2.5-2.6b:free"
+  ],
+  "started_at": "2026-11-02T10:47:05.233248+00:00",
+  "finished_at": "2026-11-02T10:47:09.242840+00:00",
+  "total_questions": 1,
+  "summary": [
+    {
+      "model_id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0,
+      "failed": 0,
+      "avg_relevance": 0.285,
+      "avg_groundedness": 0.227,
+      "avg_latency_s": 1.091
+    },
+    {
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0,
+      "failed": 0,
+      "avg_relevance": 0.823,
+      "avg_groundedness": 0.654,
+      "avg_latency_s": 1.981
+    },
+    {
+      "model_id": "liquid/lfm-2.5-2.6b:free",
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0,
+      "failed": 0,
+      "avg_relevance": 0.788,
+      "avg_groundedness": 0.663,
+      "avg_latency_s": 0.664
+    }
+  ],
+  "questions": [
+    {
+      "id": "it-lost-laptop",
+      "question": "How quickly must a lost company laptop be reported?",
+      "document": "IT_Help_Desk_Guide.txt",
+      "should_refuse": false,
+      "sources": [
+        {
+          "id": "IT_Help_Desk_Guide.txt::chunk1",
+          "text": " the self-service password reset option on the company sign-in page. If self-service reset fails, they should create an IT support ticket. Employees must never share passwords with other people.\n\n3. LOST OR STOLEN DEVICES\nA lost or stolen company laptop must be reported to the IT Help Desk within one hour of discovery. The employee should also notify their reporting manager. IT will take appropriate steps to secure company accounts and data.\n\n4. SUPPORT RESPONSE TIMES\nPriority 1 incidents, such as a company-wide service outage, receive an initial response within 30 minutes. Priority 2 issues",
+          "source": "IT_Help_Desk_Guide.txt",
+          "distance": 0.3901466131210327
+        },
+        {
+          "id": "IT_Help_Desk_Guide.txt::chunk2",
+          "text": " as a company-wide service outage, receive an initial response within 30 minutes. Priority 2 issues receive an initial response within four working hours. Normal support requests receive an initial response within one working day.\n\n5. SOFTWARE REQUESTS\nEmployees must request new software through the Help Desk portal. IT reviews licensing and security requirements before installation. Installing unapproved software on company devices is not permitted.\n",
+          "source": "IT_Help_Desk_Guide.txt",
+          "distance": 0.5812041759490967
+        },
+        {
+          "id": "IT_Help_Desk_Guide.txt::chunk0",
+          "text": "CEDARLINE SYSTEMS - IT HELP DESK GUIDE\nTraining document | Version 1.0\nThis is a fictional company and the procedures below are sample data for a RAG exercise.\n\n1. REQUESTING IT SUPPORT\nEmployees should open an IT ticket through the internal Help Desk portal. Each ticket must include a short issue description, the affected device or application, and an urgency level. The portal provides a ticket reference number.\n\n2. PASSWORD RESETS\nEmployees who forget their password should use the self-service password reset option on the company sign-in page. If self-service reset fails, they",
+          "source": "IT_Help_Desk_Guide.txt",
+          "distance": 0.7254977822303772
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "question_id": "it-lost-laptop",
+      "model_id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "answer": "Within one hour of discovery.",
+      "error": "",
+      "latency_s": 1.091,
+      "correct": true,
+      "matched": [
+        "one hour"
+      ],
+      "missing": [],
+      "relevance": 0.285,
+      "groundedness": 0.227
+    },
+    {
+      "question_id": "it-lost-laptop",
+      "model_id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "answer": "A lost or stolen company laptop must be reported to the IT Help Desk within one hour of discovery.",
+      "error": "",
+      "latency_s": 1.981,
+      "correct": true,
+      "matched": [
+        "one hour"
+      ],
+      "missing": [],
+      "relevance": 0.823,
+      "groundedness": 0.654
+    },
+    {
+      "question_id": "it-lost-laptop",
+      "model_id": "liquid/lfm-2.5-2.6b:free",
+      "answer": "According to the IT Help Desk Guide, a lost or stolen company laptop must be reported to the IT Help Desk **within one hour of discovery**.",
+      "error": "",
+      "latency_s": 0.664,
+      "correct": true,
+      "matched": [
+        "one hour"
+      ],
+      "missing": [],
+      "relevance": 0.788,
+      "groundedness": 0.663
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+    "display_name": "Nemotron 3 Nano (30B)",
+    "provider": "NVIDIA",
+    "tagline": "Reasoning • Fast mixture-of-experts",
+    "is_open": true,
+    "color": "#3b82f6"
+  },
+  {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "display_name": "Nemotron 3 Ultra (550B)",
+    "provider": "NVIDIA",
+    "tagline": "Largest • Strongest reasoning",
+    "is_open": true,
+    "color": "#22c55e"
+  },
+  {
+    "id": "liquid/lfm-2.5-2.6b:free",
+    "display_name": "LFM 2.5 (2.6B)",
+    "provider": "Liquid AI",
+    "tagline": "Lightweight • Efficient",
+    "is_open": true,
+    "color": "#a855f7"
+  }
+]

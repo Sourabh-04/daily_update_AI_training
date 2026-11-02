@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Rebuilt automatically on first query
+chroma_db/
+
+# Frontend
+node_modules/
+dist/
+
+.claude/

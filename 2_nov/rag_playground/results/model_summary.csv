@@ -1,0 +1,4 @@
+model,avg_time_seconds,answered,failed
+nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,1.335,2,0
+liquid/lfm-2.5-2.6b:free,1.380,2,0
+nvidia/nemotron-3-ultra-550b-a55b:free,3.170,2,0
