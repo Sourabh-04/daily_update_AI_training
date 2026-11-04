@@ -1,0 +1,11 @@
+# Local settings (copy .env.example to .env)
+.env
+
+# Model weights are large (~1 GB): get them with python download_model.py
+Models/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

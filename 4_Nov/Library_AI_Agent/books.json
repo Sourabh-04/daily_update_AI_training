@@ -1,0 +1,44 @@
+[
+  {
+    "id": 101,
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "category": "Programming",
+    "available_copies": 2
+  },
+  {
+    "id": 102,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Programming",
+    "available_copies": 2
+  },
+  {
+    "id": 103,
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "category": "History",
+    "available_copies": 3
+  },
+  {
+    "id": 104,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "category": "Self-Help",
+    "available_copies": 1
+  },
+  {
+    "id": 105,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Fiction",
+    "available_copies": 0
+  },
+  {
+    "id": 106,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "category": "Science",
+    "available_copies": 2
+  }
+]
