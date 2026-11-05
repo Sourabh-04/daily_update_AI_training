@@ -1,0 +1,30 @@
+[
+  {
+    "reservation_id": 1,
+    "book_id": 101,
+    "title": "Python Crash Course",
+    "customer_name": "Sourabh",
+    "reserved_at": "2026-11-04 17:09:10"
+  },
+  {
+    "reservation_id": 2,
+    "book_id": 103,
+    "title": "Sapiens: A Brief History of Humankind",
+    "customer_name": "Sourbah",
+    "reserved_at": "2026-11-04 17:17:16"
+  },
+  {
+    "reservation_id": 3,
+    "book_id": 102,
+    "title": "Clean Code",
+    "customer_name": "Rahul",
+    "reserved_at": "2026-11-05 09:53:53"
+  },
+  {
+    "reservation_id": 4,
+    "book_id": 101,
+    "title": "Python Crash Course",
+    "customer_name": "Ahmed",
+    "reserved_at": "2026-11-05 10:54:30"
+  }
+]
