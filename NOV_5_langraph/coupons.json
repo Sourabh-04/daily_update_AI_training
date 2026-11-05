@@ -1,0 +1,5 @@
+[
+  {"code": "SAVE10", "discount_percent": 10},
+  {"code": "WELCOME10", "discount_percent": 10},
+  {"code": "STUDENT10", "discount_percent": 10}
+]
