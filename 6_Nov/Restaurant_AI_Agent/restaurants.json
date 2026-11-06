@@ -1,0 +1,50 @@
+[
+  {
+    "id": "R101",
+    "name": "Spice Garden",
+    "cuisine": "Indian",
+    "location": "Hyderabad",
+    "price_per_person": 800,
+    "available_seats": 20
+  },
+  {
+    "id": "R102",
+    "name": "Dragon Bowl",
+    "cuisine": "Chinese",
+    "location": "Bengaluru",
+    "price_per_person": 650,
+    "available_seats": 12
+  },
+  {
+    "id": "R103",
+    "name": "Bella Napoli",
+    "cuisine": "Italian",
+    "location": "Mumbai",
+    "price_per_person": 1200,
+    "available_seats": 8
+  },
+  {
+    "id": "R104",
+    "name": "Coastal Catch",
+    "cuisine": "Seafood",
+    "location": "Chennai",
+    "price_per_person": 950,
+    "available_seats": 0
+  },
+  {
+    "id": "R105",
+    "name": "Taco Fiesta",
+    "cuisine": "Mexican",
+    "location": "Delhi",
+    "price_per_person": 700,
+    "available_seats": 15
+  },
+  {
+    "id": "R106",
+    "name": "Sakura House",
+    "cuisine": "Japanese",
+    "location": "Hyderabad",
+    "price_per_person": 1500,
+    "available_seats": 5
+  }
+]
