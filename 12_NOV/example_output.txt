@@ -1,0 +1,65 @@
+Real run of `python workflow.py` on the first two requests in returns.json.
+The manager typed "reject" for RET202.
+
+============================================================
+ RET201  |  Wireless Keyboard  |  ₹1499  |  UNOPENED
+============================================================
+[1/4] Eligibility check ... done
+severity: 1. Eligibility result: **True**
+
+2. Explanation:
+- Product amount (₹1,499) is below the ₹25,000 threshold.
+- Return request is within 30 days of delivery (6 days).
+- Invoice is available.
+- Item is unopened (does not require photo evidence).
+- Customer has 0 previous returns in 90 days.
+- No mention of HIGH-risk identification by Risk Agent.
+
+3. Any exceptions:
+- None. All policy conditions are satisfied.
+[2/4] Risk level : LOW
+      Reason     : All eligibility conditions are satisfied, no evidence of fraud or unusual behaviour, and customer history is clear.
+[3/4] Decision   : AUTO_APPROVED
+[4/4] Customer message:
+------------------------------------------------------------
+Your refund request for the Wireless Keyboard has been approved for processing. We will follow up with the next steps shortly. Thank you for providing the necessary information.
+------------------------------------------------------------
+
+============================================================
+ RET202  |  Gaming Laptop  |  ₹79999  |  USED
+============================================================
+[1/4] Eligibility check ... done
+severity: 1. **Eligibility result:** False
+
+2. **Explanation:**
+- The product amount (₹79,999) exceeds the ₹25,000 policy threshold.
+- Return request is within 30 days.
+- Invoice is available.
+- Item is USED (policy requires unopened or damaged with supporting photos; "USED" without mention of damage does not qualify).
+- No excessive previous returns.
+- No HIGH-risk flag mentioned.
+
+**Key reason for ineligibility:**
+- Product amount is above the allowed limit.
+- Item is USED, not unopened or damaged (no exception for “performance” issues under policy).
+
+3. **Any exceptions:**
+- None. The policy explicitly excludes USED items in cases where the item isn't reported as damaged.
+- No exceptions for buyer’s remorse or “performance” related dissatisfaction.
+[2/4] Risk level : LOW
+      Reason     : Return request is ineligible due to policy violation (high value, used item without damage), but no fraudulent or HIGH-risk behavior detected. No previous return abuse or evidence of unusual activity.
+[3/4] Decision   : ESCALATED -> needs manager review
+------------------------------------------------------------
+  MANAGER REVIEW REQUIRED
+  Product : Gaming Laptop  (₹79999)
+  Risk    : LOW
+------------------------------------------------------------
+  ApprovalGateway: PAUSED - awaiting manager
+RET202 needs review. approve / reject? reject
+[3/4] Decision   : MANAGER_REJECTED  (by manager)
+[4/4] Customer message:
+------------------------------------------------------------
+Thank you for your request regarding a refund for your Gaming Laptop. After review, we regret to inform you that your request does not meet the eligibility criteria outlined in our policy. The main reasons are that the product amount exceeds the policy threshold and the item is classified as used, which is not eligible for a refund unless it is damaged.
+
+If you have any further questions or require clarification, please feel free to contact us.
+------------------------------------------------------------
